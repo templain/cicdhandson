@@ -15,7 +15,7 @@ jobs:
       - name: Goの環境をセットアップする
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22.2'
+          go-version: '1.22.3'
       - name: フォーマットを実行する
         run: test -z $(gofmt -l .)
       - name: 静的解析を実行する
@@ -24,4 +24,3 @@ jobs:
         run: go test
       - name: ビルドを実行する
         run: go build .
-        
